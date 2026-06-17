@@ -46,16 +46,16 @@ export default function MembershipPageClient() {
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="h-px w-8 bg-white/10" />
-              <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+              <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
                 Membership
               </span>
             </div>
             <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold tracking-[-0.03em] leading-[0.95]">
               <span className="text-gradient">Premium</span>
               <br />
-              <span className="text-white/30">membership</span>
+              <span className="text-white/50">membership</span>
             </h1>
-            <p className="mt-5 max-w-lg text-[15px] text-white/30 font-light leading-relaxed">
+            <p className="mt-5 max-w-lg text-[15px] text-white/50 font-light leading-relaxed">
               Unlock exclusive features, earn rewards, and get closer to the communities that matter to you.
             </p>
             <span className="inline-block mt-4 text-[11px] font-medium px-3 py-1.5 rounded-full text-[#7b61ff] bg-[#7b61ff]/10 border border-[#7b61ff]/20">
@@ -89,12 +89,12 @@ export default function MembershipPageClient() {
                   <h3 className="text-xl font-bold text-white/85 mb-1">{tier.name}</h3>
                   <div className="mb-4">
                     <span className="text-3xl font-bold text-white">{tier.price}</span>
-                    <span className="text-sm text-white/30 ml-1">/{tier.period}</span>
+                    <span className="text-sm text-white/50 ml-1">/{tier.period}</span>
                   </div>
                   <ul className="space-y-2.5 mb-8 flex-1">
                     {tier.features.map((f) => (
                       <li key={f} className="flex items-center gap-2.5 text-[13px] text-white/40">
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white/20 shrink-0">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white/35 shrink-0">
                           <path d="M2 6L5 9L10 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         {f}
@@ -113,7 +113,7 @@ export default function MembershipPageClient() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
-            <p className="text-sm text-white/25 font-light mb-6">
+            <p className="text-sm text-white/40 font-light mb-6">
               Membership details are being finalized. Join the waitlist to be first to know.
             </p>
             <Link

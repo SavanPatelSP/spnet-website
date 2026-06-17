@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="relative py-36 md:py-48 overflow-hidden">
+    <section className="relative py-36 md:py-48 overflow-hidden" role="region" aria-label="Call to action">
       <div className="absolute inset-0">
         <motion.div
           animate={{ x: [0, 80, -40, 0], y: [0, -40, 60, 0] }}
@@ -31,11 +31,11 @@ export default function CTASection() {
           <h2 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold tracking-[-0.03em] leading-[1.05]">
             <span className="text-white/85">Join the</span>
             <br />
-            <span className="text-gradient-2">SPNET ecosystem</span>
+            <span className="text-gradient-2">SP NET ecosystem</span>
           </h2>
 
-          <p className="mt-6 text-[15px] text-white/25 max-w-lg mx-auto font-light leading-relaxed">
-            Whether you want to use our products, build on our platform, or join our team — there is a place for you in the SPNET ecosystem.
+          <p className="mt-6 text-[15px] text-white/40 max-w-lg mx-auto font-light leading-relaxed">
+            Whether you want to use our products, build on our platform, or join our team — there is a place for you in the SP NET ecosystem.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -48,12 +48,12 @@ export default function CTASection() {
             </Link>
             <Link
               href="/careers"
-              className="group relative px-7 py-3.5 text-[13px] font-medium text-white/40 hover:text-white/80 border border-white/[0.06] rounded-full transition-all duration-500 hover:border-white/[0.15]"
+              className="group relative px-7 py-3.5 text-[13px] font-medium text-white/40 hover:text-white/80 border border-white/[0.06] rounded-full transition-all duration-500 hover:border-white/[0.15] hover:bg-white/[0.02]"
             >
               View Careers
-              <span className="inline-block ml-1.5 group-hover:translate-x-1 transition-transform duration-300">
-                &rarr;
-              </span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="inline-block ml-1.5 group-hover:translate-x-1 transition-transform duration-300">
+                <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </Link>
           </div>
         </motion.div>

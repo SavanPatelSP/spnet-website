@@ -38,6 +38,6 @@ export const companyData: CompanyData = {
   founder: {
     name: "Savan Patel",
     role: "Founder & CEO",
-    bio: "Founder and CEO of SPNET INC. Building the future of connected communities through messaging, membership, and digital economy products. Focused on creating technology that empowers people and communities.",
+    bio: "Founder and CEO of SP NET INC. Building the future of connected communities through messaging, membership, and digital economy products. Focused on creating technology that empowers people and communities.",
   },
 } as const;

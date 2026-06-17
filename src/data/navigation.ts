@@ -1,12 +1,12 @@
 export const navItems = [
-  { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Technology", href: "/technology" },
-  { label: "Services", href: "/services" },
+  { label: "Security", href: "/security" },
   { label: "Roadmap", href: "/roadmap" },
+  { label: "Ecosystem", href: "/ecosystem" },
+  { label: "Company", href: "/company" },
   { label: "Newsroom", href: "/newsroom" },
   { label: "Careers", href: "/careers" },
-  { label: "Company", href: "/company" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -24,9 +24,9 @@ export const footerGroups = [
     title: "Platform",
     links: [
       { label: "Technology", href: "/technology" },
-      { label: "Services", href: "/services" },
-      { label: "Roadmap", href: "/roadmap" },
       { label: "Security", href: "/security" },
+      { label: "Roadmap", href: "/roadmap" },
+      { label: "Ecosystem", href: "/ecosystem" },
     ],
   },
   {

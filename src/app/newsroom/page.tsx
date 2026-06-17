@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Newsroom | SPNET INC",
+    title: "Newsroom | SP NET INC",
   description:
-    "Latest news, announcements, and updates from SPNET INC.",
+    "Latest news, announcements, and updates from SP NET INC.",
   openGraph: {
-    title: "Newsroom | SPNET INC",
+  title: "Newsroom | SP NET INC",
     description:
-      "Latest news and updates from SPNET INC.",
+      "Latest news and updates from SP NET INC.",
   },
+  alternates: { canonical: "/newsroom" },
 };
 
 export default function NewsroomPage() {

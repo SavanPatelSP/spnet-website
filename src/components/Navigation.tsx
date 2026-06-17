@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { navItems } from "@/data/navigation";
 import { site } from "@/data/site";
+import VerificationBadge from "@/components/VerificationBadge";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,28 +36,29 @@ export default function Navigation() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "bg-[rgba(3,3,3,0.85)] backdrop-blur-2xl border-b border-white/[0.04]"
+            ? "bg-[rgba(3,3,3,0.88)] backdrop-blur-2xl border-b border-white/[0.04] shadow-[0_1px_0_0_rgba(255,255,255,0.02)]"
             : "bg-transparent"
         }`}
         role="banner"
       >
         <nav className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
-          <Link href="/" className="relative z-10" aria-label={`${site.fullName} home`}>
-            <span className="text-lg font-bold tracking-tight">
+          <Link href="/" className="relative z-10 group" aria-label={`${site.fullName} home`}>
+            <span className="text-lg font-bold tracking-tight inline-flex items-center">
               <span className="text-gradient">{site.name}</span>
-              <span className="text-white/40 ml-0.5 font-normal">INC</span>
+              <span className="text-white/50 ml-0.5 font-normal transition-colors duration-300 group-hover:text-white/50">INC</span>
+              <span className="ml-1.5"><VerificationBadge /></span>
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-0.5">
+          <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="relative px-[14px] py-2 text-[13px] font-medium tracking-wide transition-colors duration-300 rounded-[10px]"
-                  style={{ color: isActive ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)" }}
+                  className="relative px-[16px] py-2 text-[13px] font-medium tracking-wide transition-all duration-300 rounded-[10px] hover:bg-white/[0.04]"
+                  style={{ color: isActive ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.4)" }}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}
@@ -103,7 +105,7 @@ export default function Navigation() {
             animate={{ opacity: 1, backdropFilter: "blur(40px)" }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[rgba(0,0,0,0.95)] lg:hidden"
+            className="fixed inset-0 z-40 bg-[rgba(0,0,0,0.96)] lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation"
@@ -123,7 +125,7 @@ export default function Navigation() {
                     className={`relative text-[28px] font-light tracking-tight transition-colors duration-300 ${
                       pathname === item.href
                         ? "text-white"
-                        : "text-white/30 hover:text-white/70"
+                        : "text-white/50 hover:text-white/70"
                     }`}
                     aria-current={pathname === item.href ? "page" : undefined}
                   >

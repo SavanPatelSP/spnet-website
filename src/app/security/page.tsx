@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Security | SPNET INC",
+    title: "Security | SP NET INC",
   description:
-    "SPNET security architecture — end-to-end encryption, privacy by design, content moderation, and planned enterprise security products.",
+    "SP NET security architecture — end-to-end encryption, privacy by design, content moderation, and planned enterprise security products.",
   openGraph: {
-    title: "Security | SPNET INC",
+  title: "Security | SP NET INC",
     description:
-      "SPNET security and trust architecture.",
+      "SP NET security and trust architecture.",
   },
+  alternates: { canonical: "/security" },
 };
 
 export default function SecurityPage() {

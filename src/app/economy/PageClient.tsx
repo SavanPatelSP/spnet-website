@@ -7,13 +7,13 @@ import AuroraBackground from "@/components/AuroraBackground";
 const economyFeatures = [
   {
     title: "Coins",
-    description: "Everyday currency within the SPNET ecosystem. Earn coins through participation, engagement, and contributions. Spend on features, content, and community perks.",
+    description: "Everyday currency within the SP NET ecosystem. Earn coins through participation, engagement, and contributions. Spend on features, content, and community perks.",
     icon: "●",
     accent: "#f59e0b",
   },
   {
     title: "Diamonds",
-    description: "Premium currency for exclusive items, premium content, and high-value transactions. Diamonds represent the top tier of the SPNET economy.",
+    description: "Premium currency for exclusive items, premium content, and high-value transactions. Diamonds represent the top tier of the SP NET economy.",
     icon: "◆",
     accent: "#00d4ff",
   },
@@ -57,16 +57,16 @@ export default function EconomyPageClient() {
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="h-px w-8 bg-white/10" />
-              <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+              <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
                 Economy
               </span>
             </div>
             <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold tracking-[-0.03em] leading-[0.95]">
               <span className="text-gradient">Coins &</span>
               <br />
-              <span className="text-white/30">Diamonds Economy</span>
+              <span className="text-white/50">Diamonds Economy</span>
             </h1>
-            <p className="mt-5 max-w-lg text-[15px] text-white/30 font-light leading-relaxed">
+            <p className="mt-5 max-w-lg text-[15px] text-white/50 font-light leading-relaxed">
               A digital economy built for communities. Earn, spend, and trade — powered by transparency and trust.
             </p>
             <span className="inline-block mt-4 text-[11px] font-medium px-3 py-1.5 rounded-full text-[#7b61ff] bg-[#7b61ff]/10 border border-[#7b61ff]/20">
@@ -97,7 +97,7 @@ export default function EconomyPageClient() {
                 <h3 className="text-[17px] font-bold text-white/80 group-hover:text-white transition-colors duration-300 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[13px] text-white/25 leading-relaxed font-light">
+                <p className="text-[13px] text-white/40 leading-relaxed font-light">
                   {feature.description}
                 </p>
               </motion.div>
@@ -111,8 +111,8 @@ export default function EconomyPageClient() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
-            <p className="text-sm text-white/25 font-light mb-6">
-              The SPNET economy is being designed with fairness and transparency at its core.
+            <p className="text-sm text-white/40 font-light mb-6">
+              The SP NET economy is being designed with fairness and transparency at its core.
             </p>
             <Link
               href="/contact"

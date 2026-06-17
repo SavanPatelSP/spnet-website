@@ -57,16 +57,16 @@ export default function AdminPageClient() {
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="h-px w-8 bg-white/10" />
-              <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+              <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
                 Admin Platform
               </span>
             </div>
             <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold tracking-[-0.03em] leading-[0.95]">
               <span className="text-gradient-1">Control.</span>
               <br />
-              <span className="text-white/30">Simplified.</span>
+              <span className="text-white/50">Simplified.</span>
             </h1>
-            <p className="mt-5 max-w-lg text-[15px] text-white/30 font-light leading-relaxed">
+            <p className="mt-5 max-w-lg text-[15px] text-white/50 font-light leading-relaxed">
               Everything you need to manage, moderate, and grow your SPNET community — in one powerful platform.
             </p>
             <span className="inline-block mt-4 text-[11px] font-medium px-3 py-1.5 rounded-full text-[#7b61ff] bg-[#7b61ff]/10 border border-[#7b61ff]/20">
@@ -97,7 +97,7 @@ export default function AdminPageClient() {
                 <h3 className="text-[17px] font-bold text-white/80 group-hover:text-white transition-colors duration-300 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-[13px] text-white/25 leading-relaxed font-light">
+                <p className="text-[13px] text-white/40 leading-relaxed font-light">
                   {feature.description}
                 </p>
               </motion.div>
@@ -111,7 +111,7 @@ export default function AdminPageClient() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
-            <p className="text-sm text-white/25 font-light mb-6">
+            <p className="text-sm text-white/40 font-light mb-6">
               The Admin Platform is in active development.
             </p>
             <Link

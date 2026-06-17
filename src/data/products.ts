@@ -32,7 +32,7 @@ export const products: Product[] = [
     name: "Economy Platform",
     tagline: "Value. Exchanged.",
     description:
-      "A digital economy powered by Coins & Diamonds. Earn, spend, and trade within the SPNET ecosystem. Built for transparency, fairness, and user control.",
+      "A digital economy powered by Coins & Diamonds. Earn, spend, and trade within the SP NET ecosystem. Built for transparency, fairness, and user control.",
     features: ["Coins & Diamonds system", "Peer-to-peer transactions", "Reward mechanics", "Transaction history"],
     accent: "#f59e0b",
     status: "in-development",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     name: "SP NET CLOUD",
     tagline: "Infrastructure. Everywhere.",
     description:
-      "Planned cloud infrastructure platform for distributed computing, edge deployment, and scalable storage — powering the next generation of SPNET products.",
+      "Planned cloud infrastructure platform for distributed computing, edge deployment, and scalable storage — powering the next generation of SP NET products.",
     features: ["Distributed storage", "Edge computing", "Auto-scaling", "Global deployment"],
     accent: "#7b61ff",
     status: "planned",

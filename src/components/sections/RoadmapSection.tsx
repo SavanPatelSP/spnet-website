@@ -6,7 +6,7 @@ import { roadmapMilestones } from "@/data/roadmap";
 
 export default function RoadmapSection() {
   return (
-    <section className="relative py-28 md:py-36 overflow-hidden">
+    <section className="relative py-28 md:py-36 overflow-hidden" role="region" aria-label="Roadmap">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,15 +17,18 @@ export default function RoadmapSection() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8 bg-white/10" />
-            <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+            <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
               Roadmap
             </span>
           </div>
           <h2 className="text-[34px] sm:text-[44px] md:text-[56px] font-bold tracking-[-0.03em] leading-[1.05]">
             <span className="text-gradient-1">What&apos;s next</span>
             <br />
-            <span className="text-white/35">for SPNET</span>
+            <span className="text-white/60">for SP NET</span>
           </h2>
+          <p className="mt-5 text-[15px] text-white/40 max-w-lg font-light leading-relaxed">
+            A transparent look at what we are building, what is coming next, and where we are headed.
+          </p>
         </motion.div>
 
         <div className="relative max-w-3xl mx-auto">
@@ -62,7 +65,7 @@ export default function RoadmapSection() {
                 <div className="flex items-center gap-2.5 mb-2">
                   <span
                     className={`text-[11px] font-semibold ${
-                      milestone.status === "current" ? "text-[#7b61ff]" : "text-white/25"
+                      milestone.status === "current" ? "text-[#7b61ff]" : "text-white/40"
                     }`}
                   >
                     {milestone.date}
@@ -76,7 +79,7 @@ export default function RoadmapSection() {
                 <h3 className="text-[17px] font-bold text-white/75 group-hover:text-white transition-colors duration-300 mb-1">
                   {milestone.title}
                 </h3>
-                <p className="text-[13px] text-white/25 leading-relaxed font-light">
+                <p className="text-[13px] text-white/40 leading-relaxed font-light">
                   {milestone.description}
                 </p>
               </div>
@@ -93,10 +96,12 @@ export default function RoadmapSection() {
         >
           <Link
             href="/roadmap"
-            className="inline-flex items-center gap-1.5 text-sm text-white/30 hover:text-white/70 transition-colors duration-300 font-light"
+            className="group inline-flex items-center gap-1.5 text-sm text-white/50 hover:text-white/70 transition-colors duration-300 font-light"
           >
             View full roadmap
-            <span className="text-base">&rarr;</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
+              <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </Link>
         </motion.div>
       </div>

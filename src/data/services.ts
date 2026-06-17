@@ -17,7 +17,7 @@ export const services: Service[] = [
   {
     id: "api",
     title: "API Platform",
-    description: "Planned API services enabling third-party developers and businesses to build on top of the SPNET ecosystem.",
+    description: "Planned API services enabling third-party developers and businesses to build on top of the SP NET ecosystem.",
     capabilities: ["RESTful APIs", "WebSocket services", "Developer documentation", "Integration tools"],
     status: "future",
   },

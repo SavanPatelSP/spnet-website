@@ -16,7 +16,7 @@ export const technologies: Technology[] = [
   },
   {
     category: "Cloud Infrastructure",
-    description: "Planned distributed systems architecture for future SPNET Cloud products and global edge deployment.",
+    description: "Planned distributed systems architecture for future SP NET Cloud products and global edge deployment.",
     items: ["Multi-region deployment", "Edge computing mesh", "Serverless architecture", "Container orchestration"],
     accent: "#7b61ff",
     status: "planned",

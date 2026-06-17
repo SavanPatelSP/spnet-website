@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import PageClient from "./PageClient";
 
 export const metadata: Metadata = {
-  title: "Services | SPNET INC",
+    title: "Services | SP NET INC",
   description:
-    "Future enterprise services from SPNET INC — including infrastructure platform, API platform, SaaS products, and enterprise solutions.",
+    "Future enterprise services from SP NET INC — including infrastructure platform, API platform, SaaS products, and enterprise solutions.",
   openGraph: {
-    title: "Services | SPNET INC",
+  title: "Services | SP NET INC",
     description:
-      "Future enterprise services from SPNET INC.",
+      "Future enterprise services from SP NET INC.",
   },
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

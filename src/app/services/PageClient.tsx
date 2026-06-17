@@ -24,7 +24,7 @@ export default function ServicesPageClient() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-2xl"
           >
-            <span className="inline-block text-[10px] font-semibold text-white/15 uppercase tracking-[0.25em] mb-6">
+            <span className="inline-block text-[10px] font-semibold text-white/30 uppercase tracking-[0.25em] mb-6">
               Services
             </span>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[0.95]">
@@ -32,8 +32,8 @@ export default function ServicesPageClient() {
               <br />
               <span className="text-gradient">enterprise services</span>
             </h1>
-            <p className="mt-6 text-base text-white/25 max-w-lg leading-relaxed font-light">
-              As SPNET grows, we plan to offer enterprise-grade services built on the same technology powering our products. These are future offerings — part of our long-term vision.
+            <p className="mt-6 text-base text-white/40 max-w-lg leading-relaxed font-light">
+              As SP NET grows, we plan to offer enterprise-grade services built on the same technology powering our products. These are future offerings — part of our long-term vision.
             </p>
           </motion.div>
         </div>
@@ -58,7 +58,7 @@ export default function ServicesPageClient() {
                   }}
                 >
                   <div className="flex items-start gap-3 mb-6">
-                    <span className="text-[11px] font-mono text-white/15 mt-0.5">
+                    <span className="text-[11px] font-mono text-white/30 mt-0.5">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h2 className="text-xl font-semibold text-white/90 group-hover:text-white transition-colors duration-300">
@@ -66,19 +66,19 @@ export default function ServicesPageClient() {
                     </h2>
                   </div>
 
-                  <p className="text-sm text-white/25 leading-relaxed font-light ml-7 mb-8">
+                  <p className="text-sm text-white/40 leading-relaxed font-light ml-7 mb-8">
                     {service.description}
                   </p>
 
                   <div className="ml-7 pt-6 border-t border-white/[0.04]">
-                    <span className="text-[9px] font-semibold text-white/20 uppercase tracking-[0.15em]">
+                    <span className="text-[9px] font-semibold text-white/35 uppercase tracking-[0.15em]">
                       Capabilities
                     </span>
                     <div className="flex flex-wrap gap-1.5 mt-3">
                       {service.capabilities.map((cap) => (
                         <span
                           key={cap}
-                          className="text-[11px] px-3 py-1.5 rounded-full border border-white/[0.06] text-white/25 font-light"
+                          className="text-[11px] px-3 py-1.5 rounded-full border border-white/[0.06] text-white/40 font-light"
                         >
                           {cap}
                         </span>
@@ -97,7 +97,7 @@ export default function ServicesPageClient() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-16 text-center"
           >
-            <p className="text-sm text-white/25 font-light mb-6">
+            <p className="text-sm text-white/40 font-light mb-6">
               Interested in future enterprise offerings?
             </p>
             <Link

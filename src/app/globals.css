@@ -13,7 +13,7 @@
   --accent-1: #00d4ff;
   --accent-2: #7b61ff;
   --accent-3: #b366ff;
-  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
+  --accent-gradient: linear-gradient(135deg, #00d4ff, #7b61ff, #b366ff);
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.06);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -21,7 +21,10 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -40,48 +43,56 @@ body {
 :focus-visible { outline: 1px solid rgba(123, 97, 255, 0.5); outline-offset: 2px; border-radius: 4px; }
 
 .noise {
-  position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.02;
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.015;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   background-repeat: repeat; background-size: 256px 256px;
 }
 
 .glass { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 .glass-strong { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+.glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.04); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 
 .text-gradient { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .text-gradient-1 { background: linear-gradient(135deg, #00d4ff, #7b61ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .text-gradient-2 { background: linear-gradient(135deg, #7b61ff, #b366ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.text-gradient-3 { background: linear-gradient(135deg, #00d4ff, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
 .aurora {
-  position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12; pointer-events: none;
+  position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.1; pointer-events: none;
 }
-.aurora-1 { background: radial-gradient(circle at center, rgba(0, 212, 255, 0.35), transparent 70%); }
-.aurora-2 { background: radial-gradient(circle at center, rgba(123, 97, 255, 0.35), transparent 70%); }
-.aurora-3 { background: radial-gradient(circle at center, rgba(179, 102, 255, 0.25), transparent 70%); }
+.aurora-1 { background: radial-gradient(circle at center, rgba(0, 212, 255, 0.4), transparent 70%); }
+.aurora-2 { background: radial-gradient(circle at center, rgba(123, 97, 255, 0.4), transparent 70%); }
+.aurora-3 { background: radial-gradient(circle at center, rgba(179, 102, 255, 0.3), transparent 70%); }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
 }
 @keyframes breathe {
-  0%, 100% { transform: scale(1); opacity: 0.12; }
+  0%, 100% { transform: scale(1); opacity: 0.1; }
   50% { transform: scale(1.05); opacity: 0.18; }
 }
 @keyframes draw-line {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
-
-.animate-float { animation: float 6s ease-in-out infinite; }
-.animate-breathe { animation: breathe 8s ease-in-out infinite; }
-.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
-
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.15; transform: scale(1); }
   50% { opacity: 0.3; transform: scale(1.05); }
 }
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-breathe { animation: breathe 8s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+.animate-gradient { animation: gradient-shift 8s ease infinite; background-size: 200% 200%; }
 
 .glow-text { text-shadow: 0 0 40px rgba(123, 97, 255, 0.15), 0 0 80px rgba(0, 212, 255, 0.1); }
+.glow-text-strong { text-shadow: 0 0 60px rgba(123, 97, 255, 0.25), 0 0 120px rgba(0, 212, 255, 0.15); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

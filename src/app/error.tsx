@@ -15,7 +15,7 @@ export default function Error({
           <span className="text-3xl font-bold text-gradient-2">!</span>
         </div>
         <h1 className="text-3xl font-bold text-white/80 mb-3">Something went wrong</h1>
-        <p className="text-sm text-white/25 font-light leading-relaxed mb-10">
+        <p className="text-sm text-white/40 font-light leading-relaxed mb-10">
           An unexpected error occurred. Please try again or contact us if the problem persists.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

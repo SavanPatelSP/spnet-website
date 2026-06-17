@@ -32,16 +32,16 @@ export default function TechnologyPageClient() {
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="h-px w-8 bg-white/10" />
-              <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+              <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
                 Technology
               </span>
             </div>
             <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-bold tracking-[-0.03em] leading-[0.95]">
               <span className="text-gradient-1">The stack</span>
               <br />
-              <span className="text-white/30">behind the ecosystem</span>
+              <span className="text-white/50">behind the ecosystem</span>
             </h1>
-            <p className="mt-5 max-w-lg text-[15px] text-white/30 font-light leading-relaxed">
+            <p className="mt-5 max-w-lg text-[15px] text-white/50 font-light leading-relaxed">
               Our technology architecture is built from the ground up for scale, security, and intelligence — with a clear roadmap for the future.
             </p>
           </motion.div>
@@ -70,12 +70,12 @@ export default function TechnologyPageClient() {
                   >
                     {tech.category[0]}
                   </div>
-                  <span className={`text-[9px] font-medium px-2 py-0.5 rounded-full border uppercase tracking-wider ${statusConfig[tech.status as keyof typeof statusConfig] || "text-white/30 bg-white/[0.04] border-white/[0.06]"}`}>
+                  <span className={`text-[9px] font-medium px-2 py-0.5 rounded-full border uppercase tracking-wider ${statusConfig[tech.status as keyof typeof statusConfig] || "text-white/50 bg-white/[0.04] border-white/[0.06]"}`}>
                     {tech.status === "current" ? "Current" : "Planned"}
                   </span>
                 </div>
                 <h2 className="text-xl font-bold text-white/80 mb-1.5">{tech.category}</h2>
-                <p className="text-[13px] text-white/35 mb-5 leading-relaxed font-light">{tech.description}</p>
+                <p className="text-[13px] text-white/60 mb-5 leading-relaxed font-light">{tech.description}</p>
                 <ul className="space-y-2">
                   {tech.items.map((t) => (
                     <li key={t} className="flex items-center gap-2.5 text-[13px] text-white/40">

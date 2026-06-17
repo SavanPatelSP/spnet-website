@@ -6,10 +6,10 @@ import Link from "next/link";
 import { products, type ProductStatus } from "@/data/products";
 
 const statusConfig: Record<ProductStatus, { label: string; className: string }> = {
-  current: { label: "Current", className: "text-[#00d4ff] bg-[#00d4ff]/10 border-[#00d4ff]/20" },
+  current: { label: "Beta", className: "text-[#00d4ff] bg-[#00d4ff]/10 border-[#00d4ff]/20" },
   "in-development": { label: "In Development", className: "text-[#7b61ff] bg-[#7b61ff]/10 border-[#7b61ff]/20" },
   planned: { label: "Planned", className: "text-[#f59e0b] bg-[#f59e0b]/10 border-[#f59e0b]/20" },
-  future: { label: "Future", className: "text-white/30 bg-white/[0.04] border-white/[0.06]" },
+  future: { label: "Future", className: "text-white/50 bg-white/[0.04] border-white/[0.06]" },
 };
 
 export default function FeaturedProducts() {
@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
   const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
   return (
-    <section ref={ref} className="relative py-28 md:py-36 overflow-hidden">
+    <section ref={ref} className="relative py-28 md:py-36 overflow-hidden" role="region" aria-label="Products">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,16 +32,19 @@ export default function FeaturedProducts() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8 bg-white/10" />
-            <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+            <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
               Products
             </span>
           </div>
           <h2 className="text-[34px] sm:text-[44px] md:text-[56px] font-bold tracking-[-0.03em] leading-[1.05]">
             <span className="text-gradient-1">Building</span>{" "}
-            <span className="text-white/35">the</span>
+            <span className="text-white/60">the</span>
             <br />
-            <span className="text-white/35">ecosystem</span>
+            <span className="text-white/60">ecosystem</span>
           </h2>
+          <p className="mt-5 text-[15px] text-white/40 max-w-lg font-light leading-relaxed">
+            From messaging to infrastructure — every product engineered for security, scale, and community.
+          </p>
         </motion.div>
 
         <motion.div style={{ y }} className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -59,7 +62,6 @@ export default function FeaturedProducts() {
                   href="/products"
                   className="group relative block p-[1px] rounded-2xl overflow-hidden"
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/[0.06] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   <div
                     className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                     style={{
@@ -67,8 +69,12 @@ export default function FeaturedProducts() {
                       filter: "blur(4px)",
                     }}
                   />
-                  <div className="relative p-7 md:p-8 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-white/[0.05] group-hover:border-white/[0.12] transition-all duration-500 overflow-hidden">
+                  <div className="relative p-7 md:p-8 rounded-2xl bg-[rgba(255,255,255,0.02)] border border-white/[0.05] group-hover:border-white/[0.12] group-hover:scale-[1.01] transition-all duration-500 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ background: `linear-gradient(135deg, ${product.accent}08, transparent)` }} />
+                    <svg className="absolute -top-6 -right-6 w-32 h-32 opacity-20 group-hover:opacity-40 transition-opacity duration-700" viewBox="0 0 200 200" fill="none" preserveAspectRatio="none">
+                      <circle cx="160" cy="40" r="80" fill={product.accent} opacity="0.08" />
+                      <circle cx="200" cy="100" r="50" fill={product.accent} opacity="0.05" />
+                    </svg>
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-5">
                         <div className="flex items-center gap-3">
@@ -88,14 +94,14 @@ export default function FeaturedProducts() {
                       <h3 className="text-[22px] font-bold text-white/85 group-hover:text-white transition-colors duration-300 mb-1">
                         {product.name}
                       </h3>
-                      <p className="text-[13px] text-white/30 leading-relaxed font-light mb-4">
+                      <p className="text-[13px] text-white/50 leading-relaxed font-light mb-4">
                         {product.tagline}
                       </p>
                       <div className="flex flex-wrap gap-1.5">
                         {product.features.slice(0, 3).map((f) => (
                           <span
                             key={f}
-                            className="px-2.5 py-1 text-[10px] font-medium text-white/25 bg-white/[0.03] border border-white/[0.04] rounded-full"
+                            className="px-2.5 py-1 text-[10px] font-medium text-white/40 bg-white/[0.03] border border-white/[0.04] rounded-full"
                           >
                             {f}
                           </span>
@@ -118,10 +124,12 @@ export default function FeaturedProducts() {
         >
           <Link
             href="/products"
-            className="inline-flex items-center gap-1.5 text-sm text-white/30 hover:text-white/70 transition-colors duration-300 font-light"
+            className="group inline-flex items-center gap-1.5 text-sm text-white/50 hover:text-white/70 transition-colors duration-300 font-light"
           >
             View all products
-            <span className="text-base">&rarr;</span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="transition-transform duration-300 group-hover:translate-x-1">
+              <path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </Link>
         </motion.div>
       </div>

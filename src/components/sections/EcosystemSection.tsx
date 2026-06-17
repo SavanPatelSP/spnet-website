@@ -16,7 +16,7 @@ export default function EcosystemSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.8], [0.5, 1, 1]);
 
   return (
-    <section ref={ref} className="relative py-28 md:py-36 overflow-hidden">
+    <section ref={ref} className="relative py-28 md:py-36 overflow-hidden" role="region" aria-label="Ecosystem">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,14 +27,17 @@ export default function EcosystemSection() {
         >
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8 bg-white/10" />
-            <span className="text-[10px] font-semibold text-white/20 uppercase tracking-[0.2em]">
+            <span className="text-[10px] font-semibold text-white/35 uppercase tracking-[0.2em]">
               Ecosystem
             </span>
           </div>
           <h2 className="text-[34px] sm:text-[44px] md:text-[56px] font-bold tracking-[-0.03em] leading-[1.05]">
             <span className="text-gradient-2">Connected</span>{" "}
-            <span className="text-white/35">by design</span>
+            <span className="text-white/60">by design</span>
           </h2>
+          <p className="mt-5 text-[15px] text-white/40 max-w-lg font-light leading-relaxed">
+            Every product engineered to work together — creating a unified platform greater than the sum of its parts.
+          </p>
         </motion.div>
 
         <motion.div style={{ scale, opacity }} className="relative">
@@ -46,11 +49,12 @@ export default function EcosystemSection() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link href="/products">
-                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full glass glow flex items-center justify-center mb-10 cursor-pointer hover:scale-105 transition-transform duration-500">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-full glass-strong flex items-center justify-center mb-10 cursor-pointer hover:scale-105 hover:rotate-3 transition-transform duration-700">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00d4ff]/5 via-[#7b61ff]/5 to-[#b366ff]/5 animate-pulse-glow" />
+                  <div className="absolute inset-0 rounded-full border border-white/[0.06]" />
                   <span className="relative z-10 text-center">
-                    <span className="text-gradient block text-base font-bold">SPNET</span>
-                    <span className="text-white/30 text-[11px] font-light">Ecosystem</span>
+                    <span className="text-gradient block text-base font-bold">SP NET</span>
+                    <span className="text-white/50 text-[11px] font-light">Ecosystem</span>
                   </span>
                 </div>
               </Link>
@@ -69,7 +73,7 @@ export default function EcosystemSection() {
                 >
                   <Link
                     href="/ecosystem"
-                    className="group relative block p-5 rounded-2xl border border-white/[0.04] bg-white/[0.015] hover:bg-white/[0.03] hover:border-white/[0.08] transition-all duration-500 text-center overflow-hidden"
+                    className="group relative block p-5 rounded-2xl border border-white/[0.04] bg-white/[0.015] hover:bg-white/[0.03] hover:border-white/[0.08] hover:scale-[1.02] transition-all duration-500 text-center overflow-hidden"
                   >
                     <div
                       className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -79,13 +83,13 @@ export default function EcosystemSection() {
                     />
                     <div className="relative z-10">
                       <div
-                        className="w-2 h-2 rounded-full mx-auto mb-3 group-hover:scale-150 transition-transform duration-500"
+                        className="w-2.5 h-2.5 rounded-full mx-auto mb-3 group-hover:scale-150 transition-transform duration-500"
                         style={{ backgroundColor: item.color }}
                       />
                       <h3 className="text-sm font-bold text-white/70 group-hover:text-white transition-colors duration-300">
                         {item.name}
                       </h3>
-                      <p className="text-[11px] text-white/25 mt-1 font-light">{item.desc}</p>
+                      <p className="text-[11px] text-white/40 mt-1 font-light">{item.desc}</p>
                     </div>
                   </Link>
                 </motion.div>
