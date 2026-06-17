@@ -1,0 +1,17 @@
+export const technologies = [
+  { name: "Next.js", icon: "N", description: "React framework for production", category: "frontend" },
+  { name: "TypeScript", icon: "T", description: "Typed JavaScript at scale", category: "language" },
+  { name: "React", icon: "R", description: "UI component library", category: "frontend" },
+  { name: "Node.js", icon: "N", description: "JavaScript runtime", category: "backend" },
+  { name: "Python", icon: "P", description: "General-purpose programming", category: "language" },
+  { name: "Go", icon: "G", description: "High-performance systems", category: "language" },
+  { name: "PostgreSQL", icon: "P", description: "Relational database", category: "database" },
+  { name: "Redis", icon: "R", description: "In-memory data store", category: "database" },
+  { name: "Kubernetes", icon: "K", description: "Container orchestration", category: "infra" },
+  { name: "Docker", icon: "D", description: "Container runtime", category: "infra" },
+  { name: "Terraform", icon: "T", description: "Infrastructure as code", category: "infra" },
+  { name: "GraphQL", icon: "G", description: "API query language", category: "api" },
+  { name: "WebRTC", icon: "W", description: "Real-time communication", category: "protocol" },
+  { name: "TensorFlow", icon: "T", description: "Machine learning platform", category: "ai" },
+  { name: "PyTorch", icon: "P", description: "Deep learning framework", category: "ai" },
+] as const;
