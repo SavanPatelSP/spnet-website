@@ -2,7 +2,7 @@ export const site = {
   name: "SP NET",
   fullName: "SP NET INC",
   tagline: "Building secure digital platforms, communication systems, and future technology ecosystems.",
-  domain: "spnetinc.in",
+  domain: "sp-net.in",
   foundedBy: "Savan Patel",
   founderRole: "Founder & CEO",
   year: 2026,

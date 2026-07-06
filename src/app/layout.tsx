@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: seo.title,
   description: seo.description,
   keywords: seo.keywords,
-  metadataBase: new URL("https://spnetinc.in"),
+  metadataBase: new URL("https://sp-net.in"),
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "SP NET INC",
-              url: "https://spnetinc.in",
+              url: "https://sp-net.in",
               founder: {
                 "@type": "Person",
                 name: "Savan Patel",

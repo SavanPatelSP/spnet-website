@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://spnetinc.in/sitemap.xml",
+    sitemap: "https://sp-net.in/sitemap.xml",
   };
 }
